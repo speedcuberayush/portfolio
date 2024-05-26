@@ -223,14 +223,14 @@ export default function VerticalTabs() {
               >
                 <Cnoti Cname="GRID 5.0" Cprovider="SEMI-FINALS" />
                 <Cnoti Cname="GEEK-A-THON" Cprovider="SEMI-FINALS" />
-                <Cnoti Cname="SSB/AFSB" Cprovider="2020" />
+                {/* <Cnoti Cname="SSB/AFSB" Cprovider="2020" />
                 <Cnoti Cname="CBSE MERIT" Cprovider="MATHEMATICS(2018)" />
                 <Cnoti Cname="INMO" Cprovider="2019" />
                 <Cnoti Cname="RMO" Cprovider="2019" />
-                <Cnoti Cname="PRMO" Cprovider="2017, 2018" />
+                <Cnoti Cname="PRMO" Cprovider="2017, 2018" /> */}
               </div>
 
-              <h2 className="ABTtitle">COURSES</h2>
+              {/* <h2 className="ABTtitle">COURSES</h2> */}
               <div
                 style={{
                   display: "flex",
@@ -263,7 +263,7 @@ export default function VerticalTabs() {
                 <Cnoti Cname="Python AI processing" Cprovider="Google Cloud" />
                 <Cnoti Cname="ID aware proxy" Cprovider="Google Cloud" />
               </div>
-              <h2 className="ABTtitle">SPORTS</h2>
+              {/* <h2 className="ABTtitle">SPORTS</h2>
               <div
                 style={{
                   display: "flex",
@@ -281,7 +281,7 @@ export default function VerticalTabs() {
                 <Cnoti Cname="NATIONAL SPEEDUBING" Cprovider="WCA" />
                 <Cnoti Cname="LONG JUMP" Cprovider="REGIONALS" />
                 <Cnoti Cname="FMSCI" Cprovider="ZX6R" />
-              </div>
+              </div> */}
             </div>
           </TabPanel>
           <TabPanel value={value} index={5}>
