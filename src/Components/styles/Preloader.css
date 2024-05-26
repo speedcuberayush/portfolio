@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Titan+One&display=swap");
+
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("../../BrittanySignature.ttf") format("truetype");
+}
+.Preloadermain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #111216;
+  color: #fff;
+  animation: popBack 1s forwards;
+  animation-delay: 5s;
+}
+
+.PreloaderContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: vanish 1s forwards;
+  animation-delay: 7.5s;
+}
+
+.upper,
+.lower {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.upper {
+  flex-direction: row;
+  margin-bottom: -23%;
+  z-index: 1;
+}
+
+@keyframes revealUpper {
+  to {
+    opacity: 1;
+  }
+}
+
+.lower {
+  font-size: 100px;
+  color: #0096ff;
+  opacity: 0;
+  animation: revealLower 1s forwards;
+  animation-delay: 3s;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 900;
+  z-index: 0;
+}
+
+.lower p {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes revealLower {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popBack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.6);
+  }
+}
+@keyframes vanish {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#animatedPath {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 4s cubic-bezier(0.7, 0, 0.3, 1) forwards,
+    fillPath 1s cubic-bezier(0.7, 0, 0.3, 1) forwards 3s;
+}
+
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillPath {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}

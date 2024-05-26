@@ -1,0 +1,138 @@
+.Cnotification {
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  position: relative;
+  width: 20rem;
+  /* width: 70%; */
+  height: 6rem;
+  padding: 0.5em;
+  background: #29292c;
+  border-radius: 1rem;
+  overflow: hidden;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  font-family: "Protest Strike", sans-serif;
+  font-family: "Staatliches", sans-serif;
+  font-size: 0.9em;
+  --gradient: linear-gradient(to bottom, #2eadff, #0096ff, #3d83ff);
+  --color: #0096ff;
+}
+
+.Cnotification:before {
+  position: absolute;
+  content: "";
+  inset: 0.0625rem;
+  border-radius: 0.9375rem;
+  background: #18181b;
+  z-index: 2;
+}
+
+.Cnotification:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.65rem auto 0.65rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+.Cnotification:hover:after {
+  transform: translateX(0.15rem);
+}
+
+.Cnotititle {
+  color: var(--color);
+  padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+  font-weight: 500;
+  /* font-size: 2rem; */
+  transition: transform 300ms ease;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+
+.Cnotititle p {
+  font-size: 1.3rem;
+}
+.Cnotification:hover .Cnotititle {
+  transform: translateX(0.15rem);
+}
+
+.Cnotibody {
+  color: #99999d;
+  padding: 0 1.25rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.Cnotification:hover .Cnotibody {
+  transform: translateX(0.25rem);
+}
+
+.Cnotiglow,
+.Cnotiborderglow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle closest-side at center,
+    white,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.Cnotiglow {
+  z-index: 3;
+}
+
+.Cnotiborderglow {
+  z-index: 1;
+}
+
+.Cnotification:hover .Cnotiglow {
+  opacity: 0.1;
+}
+
+.Cnotification:hover .Cnotiborderglow {
+  opacity: 0.1;
+}
+
+.Cnote {
+  color: var(--color);
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+@media (max-width: 600px) {
+  .Cnotification {
+    width: 15rem;
+  }
+  .Cnotititle p {
+    font-size: 1em !important;
+  }
+}
+@media (max-width: 400px) {
+  .Cnotification {
+    width: 13rem;
+    height: 100%;
+    /* font-size: 1em; */
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap");
+.ABTtitle {
+  display: block;
+  width: 100%;
+  font-family: "Passion One", sans-serif;
+  text-align: center;
+  font-weight: 300;
+}

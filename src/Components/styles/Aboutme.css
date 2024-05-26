@@ -1,0 +1,198 @@
+.aboutMEPART {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  /* height: 50%; */
+  margin: 5em 0;
+  background: #29292c;
+  background: #111216;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bubbler+One&family=Chau+Philomene+One:ital@0;1&family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubbler+One&family=Nerko+One&display=swap");
+
+.IndentAbout {
+  font-family: "Chau Philomene One", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.9em;
+  font-size: 1em;
+  /* text-align: center; */
+}
+
+.IndentAbout h1 {
+  color: #0096ff;
+}
+
+@media (max-width: 600px) {
+  .aboutBOX {
+    width: 98% !important;
+  }
+}
+
+.Part2Aboutme {
+  width: 100%;
+  height: 100%;
+}
+.DetaILS {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2em;
+}
+
+/* PART 2 */
+.ABnotification {
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  position: relative;
+  width: 100%;
+  /* height: 8rem; */
+  padding: 1.2em;
+
+  background: #171717;
+  border-radius: 1rem;
+  overflow: hidden;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  font-family: "Chau Philomene One", sans-serif;
+  font-size: 16px;
+  --gradient: linear-gradient(to bottom, #2eadff, #0096ff, #3d83ff);
+  --color: #32a6ff;
+}
+
+.ABnotification:before {
+  position: absolute;
+  content: "";
+  inset: 0.0625rem;
+  border-radius: 0.9375rem;
+  background: #3a3a3a;
+  background: #171717;
+  z-index: 2;
+}
+
+.ABnotification:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.65rem auto 0.65rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+.ABnotification:hover:after {
+  transform: translateX(0.15rem);
+}
+
+.ABnotititle {
+  color: var(--color);
+  padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.ABnotification:hover .ABnotititle {
+  transform: translateX(0.15rem);
+}
+
+.ABnotibody {
+  color: #99999d;
+  padding: 0 1.25rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.ABnotification:hover .ABnotibody {
+  transform: translateX(0.25rem);
+}
+
+.ABnotiglow,
+.ABnotiborderglow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle closest-side at center,
+    white,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.ABnotiglow {
+  z-index: 3;
+}
+
+.ABnotiborderglow {
+  z-index: 1;
+}
+
+.ABnotification:hover .ABnotiglow {
+  opacity: 0.1;
+}
+
+.ABnotification:hover .ABnotiborderglow {
+  opacity: 0.1;
+}
+
+.ABnote {
+  color: var(--color);
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+.ABcont {
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
+  gap: 1em;
+  /* justify-content: space-between; */
+}
+.ABCCCnT {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ABpic {
+  width: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ABcontee {
+  width: 50%;
+}
+
+.ABIMG {
+  width: 60%;
+}
+@media (max-width: 600px) {
+  .ABcontee {
+    width: 100%;
+  }
+  .ABnotification:after {
+    width: 0rem;
+  }
+}

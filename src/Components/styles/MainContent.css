@@ -1,0 +1,168 @@
+.MainContent {
+  animation: vanish2 1s forwards;
+  color: #fff;
+  font: "BrttanySignature";
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+@keyframes vanish2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  background-color: #111216;
+}
+
+.gridwalapart {
+  background-color: #fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3a3a3a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Londrina+Solid:wght@100;300;400;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&display=swap");
+.SkillSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.SkillSection > * {
+  flex: 1;
+}
+.SkillContent {
+  font-family: "Londrina Solid", sans-serif;
+  width: 100%;
+  padding: 2em;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1em; */
+  height: 100%;
+  justify-content: space-between;
+}
+.SkillContent h1 {
+  font-family: "Passion One", sans-serif;
+  font-size: 3em;
+  color: #0096ff;
+  text-transform: capitalize;
+}
+.SkillContent p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .SkillSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ===banner  */
+.Bannar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100vh;
+  position: relative; /* Added for pseudo-element positioning */
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.4em; /* Ensures no overflow if background size is adjusted */
+}
+
+.Bannar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../Assets/bannar.png");
+  background-size: cover; /* Adjusts the background image size */
+  background-position: center; /* Centers the background image */
+
+  opacity: 0.4; /* Adjusts the opacity for a subtle tint effect */
+  z-index: -1; /* Places the pseudo-element behind the content */
+}
+.BannerText {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 55%; */
+  width: 35rem;
+  /* padding: 0 30em; */
+  /* font-family: "Staatliches", "Protest Strike", sans-serif; */
+  font-family: "Passion one", sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.word {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 0.5s forwards;
+  text-align: center;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .BannerText {
+    padding: 0;
+    font-size: 0.8em;
+    width: 75%;
+  }
+  .SkillSection p {
+    display: none;
+  }
+  .SkillSection h2 {
+    color: #0096ff;
+  }
+}
+
+.ProjectSlider,
+.ProjectCategory {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

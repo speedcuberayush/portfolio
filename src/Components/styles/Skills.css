@@ -1,0 +1,48 @@
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Skills {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px 20px 30px;
+  flex-wrap: wrap;
+  font-family: "Staatliches";
+  /* justify-content: space-between; */
+}
+.SkH {
+  font-family: "Staatliches";
+  text-align: center;
+}
+
+.Skills p {
+  width: 9em;
+  /* margin-left: 10%; */
+}
+
+.skillscomp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 935px) {
+  .Skills {
+    padding: 5px 15px 4px 15px;
+  }
+
+  .Skills p {
+    display: none;
+  }
+}
