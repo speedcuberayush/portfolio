@@ -118,7 +118,7 @@ function MainContent() {
       <Aboutme />
       <ProjectSlider />
       <ProjectCategory />
-      {/* <LastPart /> */}
+      <LastPart />
     </div>
   );
 }
